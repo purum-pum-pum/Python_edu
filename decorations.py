@@ -15,4 +15,4 @@ def hello():
 
 print (hello()) ## выведет <b><i>hello habr</i></b>
 
-#ffrrefea
+#ffrref
