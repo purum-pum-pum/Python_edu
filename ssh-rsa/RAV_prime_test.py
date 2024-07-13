@@ -10,7 +10,7 @@ def rabinMiller(n):
          s = s//2
          t +=1
      k = 0
-     while k<20:
+     while k<110:
          a = random.randrange(2,n-1)
          #a^s is computationally infeasible.  we need a more intelligent approach
          #v = (a**s)%n
@@ -55,13 +55,15 @@ def generateLargePrime(k):
      #k is the desired bit length
      r=100*(math.log(k,2)+1) #number of attempts max
      r_ = r
-     while r>0:
+     Four_primes=0
+     while Four_primes<5:
         #randrange is mersenne twister and is completely deterministic
         #unusable for serious crypto purposes
          n = random.randrange(2**(k-1),2**(k))
          r-=1
          if isPrime(n) == True:
-             return n
+             Four_primes=Four_primes+1
+             print(n)
      return "Failure after "+ str(r_) + " tries."
 
 print(generateLargePrime(1024))
