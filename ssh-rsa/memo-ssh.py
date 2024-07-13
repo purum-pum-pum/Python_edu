@@ -12,3 +12,5 @@ print(phrase_to_hash(str(choosed_words)))
 
 print(choosed_words)
 
+random.seed(phrase_to_hash)
+
