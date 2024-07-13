@@ -7,7 +7,7 @@ salt = os.urandom(16)
 def phrase_to_hash(some_wods):
     kdf = Scrypt(
 
-    salt=salt,
+    salt=str.encode("56"),
     length=32,
     n=2**16,
     r=8,
@@ -17,10 +17,11 @@ def phrase_to_hash(some_wods):
     key = kdf.derive(str.encode(some_wods))
     
     print(key.hex())
+    return key.hex()
 # verify
     kdf = Scrypt(
 
-    salt=salt,
+    salt=str.encode("56"),
     length=32,
     n=2**16,
     r=8,
@@ -29,4 +30,4 @@ def phrase_to_hash(some_wods):
 
     kdf.verify(str.encode(some_wods), key)
 
-phrase_to_hash("hhhh r5g6 hhggffxerctv55 kkii99kh7yy7 h7hy7y7oiu8uuu8u hyybby")
+#phrase_to_hash("hhhh r5g6 hhggffxerctv55 kkii99kh7yy7 h7hy7y7oiu8uuu8u hyybby")
