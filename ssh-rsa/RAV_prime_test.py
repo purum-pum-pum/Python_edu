@@ -3,6 +3,8 @@ import math
 import sys
 from gmpy2 import *
 
+list_of_primes = []
+
 def rabinMiller(n):
      s = n-1
      t = 0
@@ -62,8 +64,14 @@ def generateLargePrime(k):
          n = random.randrange(2**(k-1),2**(k))
          r-=1
          if isPrime(n) == True:
+             list_of_primes.append(n)
+
              Four_primes=Four_primes+1
              print(n)
      return "Failure after "+ str(r_) + " tries."
 
 print(generateLargePrime(1024))
+
+print("cfcffre")
+print("#######")
+print(list_of_primes)
