@@ -70,7 +70,7 @@ def generateLargePrime(k):
              print(n)
      return "Failure after "+ str(r_) + " tries."
 
-print(generateLargePrime(1024))
+#print(generateLargePrime(1024))
 
 print("cfcffre")
 print("#######")

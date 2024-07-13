@@ -1,6 +1,10 @@
 from RAV_test_random import gen_numbers
-#import random
+from RAV_prime_test import generateLargePrime
+import random
 
-#random.seed(343432232432)
+random.seed(343432232432)
 
 print(gen_numbers(7))
+
+print(generateLargePrime(2048))
+

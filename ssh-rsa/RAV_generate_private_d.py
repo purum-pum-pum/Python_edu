@@ -1,10 +1,10 @@
 import random
 
-
-for i in range(3):
-    d = int(random.getrandbits(2048))
-    print(d)
-
-    d11 = (d*437288239489483787818928998923948747821788127848942318918947847883218891289892898789189910912094904837827813274462667127847478238237764361245643667234643+1)%65537
-    print(d11)
-   
+def bruteforse_k_for_rsa_d(rsa_phi_num, rsa_e_num):
+    ostatok=8
+    rsa_k_num=1
+    while ostatok != 0:
+        ostatok=(rsa_k_num*rsa_phi_num+1) % rsa_e_num
+        rsa_k_num=rsa_k_num+1
+    
+    return rsa_k_num
